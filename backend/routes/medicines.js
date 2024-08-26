@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Medicine = require('../models/Medicine');
-const authenticateToken = require('../middleware/authenticateToken');
+const authenticateToken = require('../middleware/authMiddleware');
 
 // Create a new medicine
 router.post('/', authenticateToken, async (req, res) => {
